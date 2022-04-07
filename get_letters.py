@@ -1,11 +1,9 @@
 def get_letters():
     """
-    The function goes through all the letters between A to Z and a to z and creates all the arranged pairs.
-    :return: The list of all characters between a and z and between A and Z.
+    The function returns the letters A to Z and a to z as a list.
+    :return: The list of all letters - A to Z and a to z.
     """
-    return [(chr(capital_letter), chr(lower_letter))
-            for capital_letter in range(ord('B'), ord('Z'))
-            for lower_letter in range(ord('b'), ord('z'))]
+    return [chr(letter) for letter in range(ord('A'), ord('z') + 1) if chr(letter).isalpha()]
 
 
 if __name__ == "__main__":
